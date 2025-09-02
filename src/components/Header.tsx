@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {Sparkles, Paintbrush2, Circle, CircleDashed, CircleSlashed, CircleOff, CircleDot} from "lucide-react";
 
 import { TitleBar } from '@react95/core';
-import { Doc , Star } from '@react95/icons';
+import { Doc , Star , User7 , Notepad1 } from '@react95/icons';
 
 
 
@@ -18,12 +18,16 @@ const Header: FunctionComponent = () => {
 
     const navigate = useNavigate();
 
+    const goHome = () => {
+        navigate(`/`);
+    };
+
     return (
-    <TitleBar active icon={<Doc variant="16x16_4" />} title="Lirikisa">
+    <TitleBar active icon={<Notepad1 variant="32x32_4"/>} title="Lirikisa" className="cursor-pointer" onClick={()=>goHome() }>
       <TitleBar.OptionsBox>
 
-        <TitleBar.Option as="a" href="https://github.com/React95/React95">
-          <Star variant="16x16_4" />
+        <TitleBar.Option as="a" href="/">
+            <User7 variant="32x32_4"/>
         </TitleBar.Option>
 
       </TitleBar.OptionsBox>

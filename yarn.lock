@@ -97,6 +97,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@react95/clippy@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@react95/clippy/-/clippy-2.0.2.tgz"
+  integrity sha512-2JB+hMg2nx5E/rKYzxEWPZggb7pNe1wGljmnj+aSTaJf8ro9JuParb62jfx3VHSeGyygy3M3BMq6txMq9wRmtg==
+  dependencies:
+    clippyts "^1.0.4"
+
 "@react95/core@^9.6.0":
   version "9.6.0"
   resolved "https://registry.npmjs.org/@react95/core/-/core-9.6.0.tgz"
@@ -505,6 +512,11 @@ classnames@^2.5.1:
   version "2.5.1"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
+
+clippyts@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/clippyts/-/clippyts-1.0.4.tgz"
+  integrity sha512-oo78IuzrUKzTiMjyF1t5Xh0MFrsQ7/MxG9wXYek1TPiFC2F6aNnO8ioiPwLNOw3EYHwzMAQAWwGRMWEc6Lms6g==
 
 cliui@^8.0.1:
   version "8.0.1"

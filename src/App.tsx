@@ -6,8 +6,20 @@ import Lyrics from "./Page/Lyrics/Lyrics";
 import Artist from "./Page/Artist/Artist";
 
 import {Frame} from "@react95/core";
+import { useEffect } from "react";
+import { useClippy, ClippyProvider } from '@react95/clippy';
 
 function App() {
+
+    const { clippy } = useClippy();
+
+    useEffect(() => {
+        if (clippy) {
+            clippy.play('Wave');
+            clippy.speak('Thannks for your visits');
+        }
+    }, [clippy]); 
+
   return (
     <div className="flex p-3">
       <div className="w-full max-w-lg rounded-md border-neutral-400">

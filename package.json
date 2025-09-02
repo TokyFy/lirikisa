@@ -10,6 +10,7 @@
     "proxy": "lcp --proxyUrl https://tonokira.vercel.app/api/rest"
   },
   "dependencies": {
+    "@react95/clippy": "^2.0.2",
     "@react95/core": "^9.6.0",
     "@react95/icons": "^2.2.0",
     "axios": "^1.2.4",

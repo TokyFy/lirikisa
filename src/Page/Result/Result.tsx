@@ -10,6 +10,7 @@ import {useQuery} from "react-query";
 
 import {List} from "@react95/core";
 import {Mshtml32538} from "@react95/icons";
+import { useClippy, ClippyProvider } from '@react95/clippy';
 
 
 interface OwnProps {
@@ -18,6 +19,18 @@ interface OwnProps {
 type Props = OwnProps;
 
 const Result: FunctionComponent<Props> = (props) => {
+
+
+    const { clippy } = useClippy();
+
+    useEffect(() => {
+        if (clippy) {
+            clippy.play('Congratulate');
+            clippy.speak('Hohoo You have a great taste of musics');
+        }
+    }, [clippy]); 
+
+
     const [searchParams, setSearchParams] = useSearchParams();
     const [query, setQuery] = useState(searchParams.get("q"));
 

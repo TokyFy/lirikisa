@@ -26,7 +26,7 @@ const Result: FunctionComponent<Props> = (props) => {
     useEffect(() => {
         if (clippy) {
             clippy.play('Congratulate');
-            clippy.speak('Hohoo You have a great taste of musics');
+            clippy.speak('Hohoo You have a great taste of musics', true);
         }
     }, [clippy]); 
 

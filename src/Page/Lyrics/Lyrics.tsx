@@ -1,4 +1,4 @@
-import React, {FunctionComponent , useEffect } from "react";
+import React, {FunctionComponent , useEffect, useMemo } from "react";
 import {useLocation, useParams} from "react-router-dom";
 import {GetLyrics} from "../../service";
 import {useQuery} from "react-query";
@@ -12,6 +12,7 @@ import {useNavigate} from "react-router-dom";
 import {Fieldset , TextArea , List , Button} from "@react95/core";
 import {Fontext2 , User} from "@react95/icons";
 import { useClippy, ClippyProvider } from '@react95/clippy';
+import {Lrc} from "lrc-kit";
 
 const Lyrics: FunctionComponent = () => {
     const {id} = useParams();
@@ -21,7 +22,7 @@ const Lyrics: FunctionComponent = () => {
     useEffect(() => {
         if (clippy) {
             clippy.play('Acknowledge');
-            clippy.speak('Yoyo , now you can donwload it TT');
+            clippy.speak('Yoyo , now you can donwload it TT', false);
         }
     }, [clippy]); 
 
@@ -37,6 +38,15 @@ const Lyrics: FunctionComponent = () => {
         staleTime: 5 * (60 * 1000),
         cacheTime: 2.5 * (60 * 1000),
     });
+
+    const lyricsText = useMemo(() => {
+      if (!LyricsData) return "";
+      const lrcData = Lrc.parse(LyricsData.lyric);
+
+      return lrcData.lyrics.map(line => line.content).join('\n');
+    }, [LyricsData]);
+
+    
 
     function downloadTxtFile(Lrc: string, title: string, Artist: string) {
         const blob = new Blob([Lrc], {type: "text/plain"});
@@ -85,7 +95,7 @@ const Lyrics: FunctionComponent = () => {
                         </Button>
                     </div>
                     <Fieldset legend="Lyrics ... " className="p-2" >
-                        <TextArea readOnly fontFamily="monospace" whiteSpace="pre-line" overflow="auto" rows={32} w="100%" value={LyricsData.lyric} />
+                        <TextArea readOnly fontFamily="monospace" whiteSpace="pre-line" overflow="auto" rows={32} w="100%" value={lyricsText} />
                     </Fieldset>
                 </>
             )}

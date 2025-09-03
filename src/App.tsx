@@ -16,9 +16,8 @@ function App() {
 
     useEffect(() => {
         if (clippy) {
-            console.log(clippy);
             clippy.play('Wave');
-            clippy.speak('Thannks for your visits');
+            clippy.speak('Thannks for your visits', false);
         }
     }, [clippy]); 
 
@@ -26,6 +25,7 @@ function App() {
   <ClippyProvider agentName={AGENTS.MERLIN}>
     <div className="flex p-3">
       <div className="w-full max-w-lg rounded-md border-neutral-400">
+      {/* @ts-ignore */}
       <Frame bgColor="$material" boxShadow="$out" padding="$12">
         <Header />
         <Routes>

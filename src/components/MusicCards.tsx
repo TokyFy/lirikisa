@@ -64,17 +64,10 @@ const MusicCards: FunctionComponent<Props> = (
             onClick={() => cardClickHandler()}>
             <div className={"flex text-md grow justify-between items-center"}>
                 <p
-                    className={"first-letter:uppercase"}>
-                    <span
-                        className="group-hover:underline cursor-cell"
-                        onClick={(event) => {
-                            event.stopPropagation();
-                            ArtistNameClickHandler();
-                        }}
-                    >
-                        {artist}
-                    </span>
-                    <span className="inline-block">{" - "}</span>{title}
+                    className={"first-letter:uppercase flex gap-2"}>
+                    <span>{artist}</span>
+                    <span>{" - "}</span>
+                    <span>{title}</span>
                 </p>
                 <p>
                     <strong>{album}</strong>

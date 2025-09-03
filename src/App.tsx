@@ -8,6 +8,7 @@ import Artist from "./Page/Artist/Artist";
 import {Frame} from "@react95/core";
 import { useEffect } from "react";
 import { useClippy, ClippyProvider } from '@react95/clippy';
+import { AGENTS } from '@react95/clippy';
 
 function App() {
 
@@ -15,12 +16,14 @@ function App() {
 
     useEffect(() => {
         if (clippy) {
+            console.log(clippy);
             clippy.play('Wave');
             clippy.speak('Thannks for your visits');
         }
     }, [clippy]); 
 
   return (
+  <ClippyProvider agentName={AGENTS.MERLIN}>
     <div className="flex p-3">
       <div className="w-full max-w-lg rounded-md border-neutral-400">
       <Frame bgColor="$material" boxShadow="$out" padding="$12">
@@ -34,6 +37,7 @@ function App() {
       </Frame>  
       </div>
     </div>
+  </ClippyProvider>
   );
 }
 

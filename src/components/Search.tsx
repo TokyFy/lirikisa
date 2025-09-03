@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useEffect, useState} from "react";
-import {Sparkles, CornerRightDown, Paintbrush, CornerDownRight, CornerDownLeft} from "lucide-react"
 
-import { Input , Button } from "@react95/core";
+import {Input, Button} from "@react95/core";
+import {Wab321012} from "@react95/icons";
 
 interface OwnProps {
     onClick: (str: string) => void;
@@ -11,7 +11,7 @@ interface OwnProps {
 
 type Props = OwnProps;
 
-const Search: FunctionComponent<Props> = ({ onClick, InputValue, placeHolder,}) => {
+const Search: FunctionComponent<Props> = ({onClick, InputValue, placeHolder,}) => {
     const [value, setValue] = useState("");
 
     useEffect(() => {
@@ -40,9 +40,11 @@ const Search: FunctionComponent<Props> = ({ onClick, InputValue, placeHolder,}) 
                 value={value}
             ></Input>
             <Button
+                className="flex gap-2"
                 onClick={() => onClick(value)}
             >
                 Enter
+                <Wab321012 variant="16x16_4"/>
             </Button>
         </div>
     );

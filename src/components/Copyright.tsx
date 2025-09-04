@@ -20,8 +20,8 @@ const Copyright: FunctionComponent<Props> = (props) => {
                     <span className="underline font-italic">
             Dream Feature Challenge
           </span>{" "}
-                    . I love all the music apps today but I can't download LRC files to put
-                    on my phone so I implemented this <br/>
+                    . We love all the music apps today but  can't download LRC files to put
+                    on my phone so we implemented this <br/>
                     <br/>
                     Made with {"<3"} and{" "}
                     <a className="font-bold" target="_blank" href="https://bolt.new/">

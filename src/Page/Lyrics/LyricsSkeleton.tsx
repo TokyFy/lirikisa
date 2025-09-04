@@ -6,7 +6,7 @@ const LyricsSkeleton: FunctionComponent = () => {
   return (
         <div className="flex flex-col justify-center items-center gap-4 p-4"> 
             <Mshtml32538 variant="32x32_4"/>
-             <p> {"Extract Lyrics ..."} </p>
+             <p> {"Extracting Lyrics..."} </p>
         </div>
   );
 };

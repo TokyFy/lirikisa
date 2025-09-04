@@ -22,7 +22,7 @@ const Lyrics: FunctionComponent = () => {
     useEffect(() => {
         if (clippy) {
             clippy.play('Acknowledge');
-            clippy.speak('Yoyo , now you can donwload it TT', false);
+            clippy.speak('Yoyo, now you can download it!', false);
         }
     }, [clippy]); 
 

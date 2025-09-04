@@ -18,7 +18,7 @@ function App() {
     useEffect(() => {
         if (clippy) {
             clippy.play('Wave');
-            clippy.speak('Thannks for your visits', false);
+            clippy.speak('Thanks for your visit', false);
         }
     }, [clippy]); 
 

@@ -12,22 +12,22 @@ const Copyright: FunctionComponent<Props> = (props) => {
         <Fieldset legend="What is this ??" className="p-2">
             <div className={"group"}>
                 <p>
-                    Hello (~-~) , <br/>
-                    Yet another Lyrics finder App ...
+                    Hello (~-~), <br/>
+                    Yet another lyrics finder app...
                     <br/>
                     <br/>
-                    This is my participation for Bolt.new{" "}
+                    This is my participation for the Bolt.new{" "}
                     <span className="underline font-italic">
             Dream Feature Challenge
           </span>{" "}
-                    , I love all the musics app today but I can't Download Lrc file to put
-                    on my phone so I implement this <br/>
+                    . I love all the music apps today but I can't download LRC files to put
+                    on my phone so I implemented this <br/>
                     <br/>
                     Made with {"<3"} and{" "}
                     <a className="font-bold" target="_blank" href="https://bolt.new/">
                         Bolt.new
                     </a>{" "}
-                    By{" "}
+                    by{" "}
                     <a target="_blank" className="font-bold" href="https://toky.vercel.app">
                         Toky
                     </a>{" "}

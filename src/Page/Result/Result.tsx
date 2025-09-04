@@ -26,7 +26,7 @@ const Result: FunctionComponent<Props> = (props) => {
     useEffect(() => {
         if (clippy) {
             clippy.play('Congratulate');
-            clippy.speak('Hohoo You have a great taste of musics', true);
+            clippy.speak('Hohoo You have great taste in music', true);
         }
     }, [clippy]); 
 
@@ -62,7 +62,7 @@ const Result: FunctionComponent<Props> = (props) => {
                 {isLoading ? (
                     <div className="flex flex-col justify-center items-center gap-4 p-4"> 
                         <Mshtml32538 variant="32x32_4"/>
-                        <p> {"Searching ..."} </p>
+                        <p> {"Searching..."} </p>
                     </div>
                 ) : isError ? (
                     <Error/>

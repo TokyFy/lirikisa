@@ -8,11 +8,11 @@ export async function searchSongs(query: string): Promise<ISongs[]> {
 
 export async function GetArtist(id: string): Promise<IArtist> {
 
-    const music = offlineMusicData[Number(id)]
+    const musicItem = offlineMusicData[Number(id)]
 
     return {
-        id : music.Artists[0].id,
-        name : music.Artists[0].name,
+        id : musicItem.Artists[0].id,
+        name : musicItem.Artists[0].name,
         picUrl: `/dummy/00${Number(id) + 1}.jpg`,
         hotSong : offlineMusicData
     }
@@ -26,10 +26,10 @@ export async function GetPictures(id: string): Promise<IPicture> {
 }
 
 export async function GetLyrics(id: string): Promise<ILyrics> {
-    const music = offlineMusicData[Number(id)];
+    const musicItem = offlineMusicData[Number(id)];
 
     return {
-        lyric : music.lyric,
+        lyric : musicItem.lyric,
         version : 404
     }
 }
